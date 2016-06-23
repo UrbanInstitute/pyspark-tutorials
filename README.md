@@ -11,6 +11,7 @@ After that, or if you're already comfortable with Python basics, get started
 with pySpark with these two lessons:
 
 _basic 1.ipynb_
+
 _basic 2.ipynb_ 
 
 They will assume you are comfortable with what Python code looks like and in
@@ -23,8 +24,12 @@ common, but others may require you to look them up.  Hopefully this framework
 gives you enough to get started.
 
 _merging.ipynb_
+
 _missing data.ipynb_
+
 _pivoting.ipynb_
+
 _resampling.ipynb_
+
 _subsetting.ipynb_
 
