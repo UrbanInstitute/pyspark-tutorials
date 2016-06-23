@@ -1,7 +1,7 @@
 # pyspark-tutorials
 Code snippets and tutorials for working with social science data in PySpark
 
-1. If you're new to Python entirely, consider trying an intro tutorial first.  
+1. If you're new to Python entirely, consider trying an intro tutorial first. 
 Python is a language that stresses readability of code, so it won't be too
 difficult to dive right in.  [This](http://www.learnpython.org/en/Hello%2C_World%21 "Interactive Python Tutorial") is one good interactive tutorial.
 
