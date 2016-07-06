@@ -25,3 +25,4 @@ gives you enough to get started.
    resampling.ipynb  
    subsetting.ipynb
 
+4. Linear Regression and windowing are on hold until Spark 2.0 is released this summer, since it comes with significant improvements to how they will work.
