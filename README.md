@@ -23,8 +23,8 @@ gives you enough to get started.
    missing data.ipynb  
    pivoting.ipynb  
    resampling.ipynb  
-   subsetting.ipynb
-   summary statistics.ipynb
+   subsetting.ipynb  
+   summary statistics.ipynb  
    graphing.ipynb
    
 4. The pySpark bootstrap used by the Urban Institute to start a cluster on Amazon
