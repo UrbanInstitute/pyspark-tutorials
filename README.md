@@ -24,5 +24,15 @@ gives you enough to get started.
    pivoting.ipynb  
    resampling.ipynb  
    subsetting.ipynb
+   summary statistics.ipynb
+   graphing.ipynb
+   
+4. The pySpark bootstrap used by the Urban Institute to start a cluster on Amazon
+Web Services only installs a handful of Python modules.  If you need others for your
+work, or specfic versions, this tutorial explains how to get them.  It is not specific
+to the pySpark environment:
 
-4. Linear Regression and windowing are on hold until Spark 2.0 is released this summer, since it comes with significant improvements to how they will work.
+   installing Python modules.ipynb
+
+5. And finally, future topics that are on hold until Spark 2.0 is deployed to Amazon
+Web Services include linear regression and windowing.
