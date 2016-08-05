@@ -1,5 +1,9 @@
 # pyspark-tutorials
-Code snippets and tutorials for working with social science data in PySpark
+Code snippets and tutorials for working with social science data in PySpark.
+Note that each .ipynb file can be downloaded and the code blocks executed or
+experimented with directly using a Jupyter (formerly IPython) notebook, or
+each one can be displayed in your browser as markdown text just by clicking on
+it.
 
 1. If you're new to Python entirely, consider trying an intro tutorial first. 
 Python is a language that stresses readability of code, so it won't be too
