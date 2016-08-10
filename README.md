@@ -20,12 +20,12 @@ you will need to know to understand the other lessons.
 
 3. Basic data tasks are covered in the following guides.  Note that these are not
 intended to be comprehensive!  They cover many of the things that are most
-common, but others may require you to look them up.  Hopefully this framework
-gives you enough to get started.
+common, but others may require you to look them up or experiment.  Hopefully this 
+framework gives you enough to get started.
 
    merging.ipynb  
    missing data.ipynb  
-   moving average imputation.ipynb
+   moving average imputation.ipynb  
    pivoting.ipynb  
    resampling.ipynb  
    subsetting.ipynb  
