@@ -7,10 +7,10 @@ This function, `build_indep_vars.py` is meant to help automate most of this task
 
 An example:
 
-df = spark.read.csv('s3://ui-spark-data/diamonds.csv', inferSchema=True, header=True, sep=',')  
-df = build_indep_vars(df, ['carat', 'clarity'], categorical_vars=['clarity'])  
+`df = spark.read.csv('s3://ui-spark-data/diamonds.csv', inferSchema=True, header=True, sep=',')`  
+`df = build_indep_vars(df, ['carat', 'clarity'], categorical_vars=['clarity'])`  
 
-glr = GeneralizedLinearRegression(family='gaussian', link='identity', labelCol='price', featuresCol='indep_vars')  
+`glr = GeneralizedLinearRegression(family='gaussian', link='identity', labelCol='price', featuresCol='indep_vars')`  
   
-model = glr.fit(df)  
-transformed = model.transform(df)  
+`model = glr.fit(df)`  
+`transformed = model.transform(df)`  
