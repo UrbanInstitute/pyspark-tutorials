@@ -29,7 +29,7 @@ def build_indep_vars(df, independent_vars, categorical_vars=None, keep_intermedi
                                         outputCol='{}_index'.format(x))
                           for x in categorical_vars]
 
-        encoder        = [OneHotEncoder(dropLast=False, 
+        encoder        = [OneHotEncoder(dropLast=True, 
                                         inputCol ='{}_index' .format(x), 
                                         outputCol='{}_vector'.format(x))
                           for x in categorical_vars]
