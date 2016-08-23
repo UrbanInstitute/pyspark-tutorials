@@ -1,4 +1,4 @@
-def build_indep_vars(df, independent_vars, categorical_vars=None, keep_intermediate=False):
+def build_indep_vars(df, independent_vars, categorical_vars=None, keep_intermediate=False, summarizer=True):
 
     """
     Data verification
@@ -42,10 +42,59 @@ def build_indep_vars(df, independent_vars, categorical_vars=None, keep_intermedi
                                 outputCol='indep_vars')
     pipeline  = Pipeline(stages=string_indexer+encoder+[assembler])
     model = pipeline.fit(df)
-    final = model.transform(df)
+    df = model.transform(df)
+
+    #for building the crosswalk between indicies and column names
+    if summarizer:
+        param_crosswalk = dict()
+
+        i = 0
+        for x in independent_vars:
+            if '_vector' in x[-7:]:
+                xrs = x.rstrip('_vector')
+                dst = df[[xrs, '{}_index'.format(xrs)]].distinct().collect()
+
+                for row in dst:
+                    param_crosswalk[int(row['{}_index'.format(xrs)]+i)] = row[xrs]
+                maxind = max(param_crosswalk.keys())
+                del param_crosswalk[maxind] #for droplast
+                i += len(dst)
+            elif '_index' in x[:-6]:
+                pass
+            else:
+                print('in else', i, x)
+                param_crosswalk[i] = x
+                i += 1
+        """
+        {0: 'carat',
+         1: u'SI1',
+         2: u'VS2',
+         3: u'SI2',
+         4: u'VS1',
+         5: u'VVS2',
+         6: u'VVS1',
+         7: u'IF'}
+        """
+        make_summary = Summarizer(param_crosswalk)
+
 
     if not keep_intermediate:
-        fcols = [c for c in final.columns if '_index' not in c[-6:] and '_vector' not in c[-7:]]
-        final = final[fcols]
+        fcols = [c for c in df.columns if '_index' not in c[-6:] and '_vector' not in c[-7:]]
+        df = df[fcols]
 
-    return final
+    if summarizer:
+        return df, make_summary
+    else:
+        return df
+
+class Summarizer(object):
+    def __init__(self, param_crosswalk):
+        self.param_crosswalk = param_crosswalk
+
+    def summarize(self, model):
+        coefs = model.coefficients
+        inter = model.intercept
+        tstat = model.summary.tValues
+        stder = model.summary.coefficientStandardError
+        pvals = model.summary.pValues
+
