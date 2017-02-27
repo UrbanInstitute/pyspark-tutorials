@@ -15,13 +15,13 @@ with pySpark with these two lessons.  They will assume you are comfortable with
 what Python code looks like and in general how it works, and lay out some things 
 you will need to know to understand the other lessons.
 
-   [Basics 1](basics 1.ipynb)
+   [Basics 1](/pyspark-basics-1.ipynb)
       * Reading and writing data on S3
       * Handling column data types
       * Basic data exploration and describing
       * Renaming columns
       
-   [Basics 2](basics 2.ipynb)
+   [Basics 2](/pyspark-basics-2.ipynb)
       * How pySpark processes commands - lazy computing
       * Persisting and unpersisting
       * Timing operations
