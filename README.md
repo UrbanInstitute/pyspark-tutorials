@@ -71,7 +71,7 @@ Web Services only installs a handful of Python modules.  If you need others for 
 work, or specfic versions, this tutorial explains how to get them.  It uses only 
 standard Python libraries, and is therefore not specific to the pySpark environment:
 
-   [Installing Pything Modules](/11_installing-python-modules.ipynb)
+   [Installing Python Modules](/11_installing-python-modules.ipynb)
       * Using the pip module for Python packages
 
 5. And finally, now that Spark 2.0 is deployed to Amazon Web Services development has
