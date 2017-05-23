@@ -35,7 +35,7 @@ framework gives you enough to get started.
       * Using unionAll to stack rows by matching columns
       * Using join to merge columns by matching specific row values
       
-   [Missing Values](/04_missing data.ipynb)
+   [Missing Values](/04_missing-data.ipynb)
       * Handling null values on loading
       * Counting null values
       * Dropping null values
